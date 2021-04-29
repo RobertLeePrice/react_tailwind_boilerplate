@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Centered from './Centered'
+import Default from './Default'
 
 const Layouts = ({ children }) => {
   let location = useLocation()
@@ -13,7 +14,7 @@ const Layouts = ({ children }) => {
   ) {
     return <Centered>{children}</Centered>
   } else {
-      console.log('invalid path name for Layout')
+      return <Default>{children}</Default>
   }
 }
 
